@@ -1,5 +1,10 @@
 # Reverse proxy for AWS S3 w/ basic authentication
 
+** Forked from https://github.com/pottava/aws-s3-proxy **
+Difference from the original is the ability to add a symlink.json to S3. This can then be included in the URL and the contents of the JSON file is used to replace the initial part of the URL.
+For instance adding symlink.json containing `{ "URL" : "/test2" }` to folder `/test1` in a bucket would mean the object /test2/hello could be accessed with the URL /test1/hello.
+
+
 [![](https://badge.imagelayers.io/pottava/s3-proxy:latest.svg)](https://imagelayers.io/?images=pottava/s3-proxy:latest 'Get your own badge on imagelayers.io')
 
 ![circleci status](https://circleci.com/gh/pottava/aws-s3-proxy.svg?style=shield&circle-token=9bc17d02e4513df42196523a1791465e65d8ab01) 
